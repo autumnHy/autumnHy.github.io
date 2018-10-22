@@ -7,17 +7,17 @@
   
   <title>Django安装与配置 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.  安装虚拟环境  安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activate">
+  <meta name="description" content="一.  安装虚拟环境   安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django安装与配置">
 <meta property="og:url" content="http://yoursite.com/2018/10/22/Django安装与配置/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一.  安装虚拟环境  安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activate">
+<meta property="og:description" content="一.  安装虚拟环境   安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-22T11:22:58.191Z">
+<meta property="og:updated_time" content="2018-10-22T11:46:43.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django安装与配置">
-<meta name="twitter:description" content="一.  安装虚拟环境  安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activate">
+<meta name="twitter:description" content="一.  安装虚拟环境   安装virtualenv  pip3 install virtualenv  在 新文件中 里执行命令创建一个干净的虚拟环境 virtualenv --no-site-packages -p &amp;lt;Python目录&amp;gt; &amp;lt;新文件名&amp;gt;    忘记Python安装目录可以在环境变量里查看   启动环境变量 Linux：　source bin/activa">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,7 +86,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一.  安装虚拟环境</p>
+        <blockquote>
+<p> 一.  安装虚拟环境</p>
+</blockquote>
 <ol>
 <li><p>安装virtualenv </p>
 <p><code>pip3 install virtualenv</code></p>
@@ -107,7 +109,9 @@
 <p><code>pip list</code></p>
 </li>
 </ol>
-<p>二. 安装 django </p>
+<blockquote>
+<p> 二. 安装 django </p>
+</blockquote>
 <ol>
 <li><p>在 <strong>虚拟环境Scripts目录</strong> 里安装django</p>
 <p><code>pip install django==1.11</code></p>
@@ -119,16 +123,16 @@
 <ol>
 <li><p>切换到 <strong>新的项目目录里</strong> 并 <strong>创建django项目</strong></p>
 <p><code>django-admin startproject &lt;项目名称&gt;</code></p>
-<blockquote>
 <p><strong>项目目录里会生成4个文件夹:</strong></p>
 <p><code>__intit__.py</code>:  初始化,配置pymyaql连接的地方</p>
 <p><code>settings.py</code>: 配置信息位置,database等</p>
 <p><code>urls.py</code>: 配置URL路由</p>
 <p><code>wsgi.py</code> : 配置网关<br><strong>注: 项目文件里添加新虚拟环境的解释器</strong></p>
-</blockquote>
 </li>
 </ol>
-<p>三. 设置 django</p>
+<blockquote>
+<p> 三. 设置 django</p>
+</blockquote>
 <ol>
 <li>在 settings.py 里设置</li>
 </ol>
@@ -144,9 +148,7 @@
 <ol>
 <li><p>迁移表格 </p>
 <p>Terminal &gt; <code>python manage.py migrate</code></p>
-<blockquote>
-<p>会在数据库里导入表格</p>
-</blockquote>
+<p><strong>注:会在数据库里导入表格</strong></p>
 </li>
 <li><p>创建超级管理员用户 </p>
 <p>Terminal &gt;<code>python manage.py createsuperuser</code></p>
@@ -159,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnk85nkd0000zgcj3jk7hk8l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnk8lvui000064cjab72oo3k" class="article-share-link">Share</a>
       
       
     </footer>
