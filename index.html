@@ -103,7 +103,7 @@
 </ol>
 <h3 id="二-安装-django"><a href="#二-安装-django" class="headerlink" title="二. 安装 django"></a>二. 安装 django</h3><ol>
 <li><p>在 <strong>虚拟环境Scripts目录</strong> 里安装django</p>
-<p><code>pip install django==1.11</code></p>
+<p>  <code>pip install django==1.11</code></p>
 <p> <strong>python3.6 对应 django1.11</strong></p>
 </li>
 <li><p>切换到 <strong>新的项目目录里</strong> 并 <strong>创建django项目</strong></p>
@@ -113,14 +113,14 @@
 <p><code>settings.py</code>: 配置信息位置,database等</p>
 <p><code>urls.py</code>: 配置URL路由</p>
 <p><code>wsgi.py</code> : 配置网关<br><strong>注: 项目文件里添加新虚拟环境的解释器</strong></p>
-<hr>
 </li>
 </ol>
+<hr>
 <h3 id="三-设置-django"><a href="#三-设置-django" class="headerlink" title="三. 设置 django"></a>三. 设置 django</h3><ol>
 <li>在 settings.py 里设置</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置能访问的ip为全部</span></span><br><span class="line">ALLOWED_HOSTS = [<span class="string">'*'</span>]</span><br><span class="line"><span class="comment"># 设置成中文页面</span></span><br><span class="line">LANGUAGE_CODE = <span class="string">'zh-hans'</span></span><br><span class="line"></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="comment"># 将数据库修改为 MySql</span></span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">        <span class="comment"># 设置库名 (同时在MySql里创建同名字的数据库)</span></span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'dj0'</span>,</span><br><span class="line">        <span class="comment"># 设置 MySql 的用户名/密码/地址/端口 </span></span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'root'</span>,</span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'root'</span>,</span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">'3306'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li><p>安装 pymysql 库</p>
 <p><code>pip instarll pymysql</code></p>
 </li>
@@ -128,11 +128,13 @@
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li><p>迁移表格 </p>
 <p>Terminal &gt; <code>python manage.py migrate</code></p>
-<p><strong>注:会在数据库里导入表格</strong></p>
 </li>
+</ol>
+<p><strong>注:会在数据库里导入表格</strong></p>
+<ol start="5">
 <li><p>创建超级管理员用户 </p>
 <p>Terminal &gt;<code>python manage.py createsuperuser</code></p>
 </li>
@@ -144,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnk9311e00006ccjbvj8t1z0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnk997f20000wkcjaziac0ys" class="article-share-link">Share</a>
       
       
     </footer>
