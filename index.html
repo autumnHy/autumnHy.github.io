@@ -84,36 +84,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一-创建-app"><a href="#一-创建-app" class="headerlink" title="一. 创建 app"></a>一. 创建 app</h4><pre><code>__在 manage.py 同一目录下执行__
-
-    Terminal &gt; `python manage.py startapp &lt;app_name&gt;`
-
-    注: 项目文件里会自动生成 &lt;app_name&gt; 同名文件夹
-</code></pre><hr>
+        <h4 id="一-创建-app"><a href="#一-创建-app" class="headerlink" title="一. 创建 app"></a>一. 创建 app</h4><p><strong>在 manage.py 同一目录下执行</strong></p>
+<p>Terminal &gt; <code>python manage.py startapp &lt;app_name&gt;</code></p>
+<p>注: 项目文件里会自动生成 &lt;app_name&gt; 同名文件夹</p>
+<hr>
 <h4 id="二-创建试图连接"><a href="#二-创建试图连接" class="headerlink" title="二. 创建试图连接"></a>二. 创建试图连接</h4><ol>
 <li>项目里的 urls.py 里添加连接地址</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 app 的视图</span></span><br><span class="line"><span class="keyword">from</span> &lt;app_name&gt; <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="comment"># 这是自带的</span></span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls), </span><br><span class="line">    <span class="comment"># 新增视图连接</span></span><br><span class="line">    <span class="comment"># 浏览器中 ip:prot/&lt;新视图名字&gt; 就是执行</span></span><br><span class="line">    url(<span class="string">r'^ &lt;新视图名字&gt; /'</span>, views.&lt;新试图名字&gt;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 app 的视图</span></span><br><span class="line"><span class="keyword">from</span> &lt;app_name&gt; <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="comment"># 这是自带的</span></span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls), </span><br><span class="line">    <span class="comment"># 新增视图连接</span></span><br><span class="line">    <span class="comment"># 浏览器中 ip:prot/&lt;方法名&gt; 就会调用下面设置在app\views.py 里的方法</span></span><br><span class="line">    url(<span class="string">r'^ &lt;方法名&gt; /'</span>, views.&lt;方法名&gt;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ol start="2">
 <li>APP 里的 views.py 里添加 方法</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> &lt;新视图名字&gt;<span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'你好'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> &lt;方法名&gt;<span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'你好'</span>)</span><br></pre></td></tr></table></figure>
 <hr>
 <h4 id="三-创建模型"><a href="#三-创建模型" class="headerlink" title="三. 创建模型"></a>三. 创建模型</h4><ol>
 <li>app 文件里 models.py 里</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建 学生类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    <span class="comment"># 定义s_name字段,varchar类型,最长4个字符,唯一</span></span><br><span class="line">    s_name = models.CharField(max_length=<span class="number">4</span>, unique=<span class="keyword">True</span>,)</span><br><span class="line">    <span class="comment"># 定义s_age字段,int类型</span></span><br><span class="line">    s_age = models.IntegerField(default=<span class="number">18</span>)</span><br><span class="line">    <span class="comment"># 定义s_gender字段,bool类型</span></span><br><span class="line">    s_gender = models.BooleanField(default=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 定义create_time字段,创建时间,新增是自动添加时间</span></span><br><span class="line">    create_time = models.DateField(auto_now_add=<span class="keyword">True</span>)</span><br><span class="line">    <span class="comment"># 定义operate_time字段,修改时间,每次添加修改时间</span></span><br><span class="line">    operate_time = models.DateField(auto_now=<span class="keyword">True</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#创建表名</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        <span class="comment"># 定义模型迁移到数据库的表名</span></span><br><span class="line">        db_table = <span class="string">'tb_stu'</span></span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>在 项目文件 settings.py 里</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'django.contrib.admin'</span>,</span><br><span class="line">    <span class="string">'django.contrib.auth'</span>,</span><br><span class="line">    <span class="string">'django.contrib.contenttypes'</span>,</span><br><span class="line">    <span class="string">'django.contrib.sessions'</span>,</span><br><span class="line">    <span class="string">'django.contrib.messages'</span>,</span><br><span class="line">    <span class="string">'django.contrib.staticfiles'</span>,</span><br><span class="line">    <span class="comment">#添加 APP 名字</span></span><br><span class="line">    <span class="string">'&lt;app_name&gt;'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">3. 生成表格</span><br><span class="line"></span><br><span class="line">	Terminal &gt; `python manage.py makemigrations`</span><br><span class="line"></span><br><span class="line">	注: app目录下 会生成出 0001_initial.py 的文件 代表成功</span><br><span class="line"></span><br><span class="line">4. 迁移表格到 MySql 数据库</span><br><span class="line"></span><br><span class="line">	Terminal &gt; `python manage.py migrate`</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>生成表格</p>
+<p>Terminal &gt; <code>python manage.py makemigrations</code></p>
+<p>注: app目录下 会生成出 0001_initial.py 的文件 代表成功</p>
+</li>
+<li><p>迁移表格到 MySql 数据库</p>
+<p>Terminal &gt; <code>python manage.py migrate</code></p>
+</li>
+</ol>
 <hr>
 <h4 id="四-插入数据"><a href="#四-插入数据" class="headerlink" title="四. 插入数据"></a>四. 插入数据</h4><ol>
 <li>项目目录 urls.py 里</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    url(<span class="string">r'^hello/'</span>, views.hello),</span><br><span class="line">    <span class="comment"># 新增url, 进入后会调用 视图里的 create_stu 方法</span></span><br><span class="line">    url(<span class="string">r'^create_stu/'</span>, views.create_stu),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>app目录 views.py 里</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 载入 app 目录里 models.py里 Student 类</span></span><br><span class="line"><span class="keyword">from</span> app.models <span class="keyword">import</span> Student</span><br><span class="line"><span class="comment">#创建 添加学生 方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_stu</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="comment">#创建学生</span></span><br><span class="line">    stu = Student()</span><br><span class="line">    stu.s_name = <span class="string">'小明'</span></span><br><span class="line">    stu.s_age = <span class="number">20</span></span><br><span class="line">    stu.save()</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'创建成功'</span>)</span><br></pre></td></tr></table></figure>
@@ -121,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/23/App安装与配置/" data-id="cjnlbzta40000fscjkg9orh3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/23/App安装与配置/" data-id="cjnlce23g0001dscjzfct1nhk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnlbztab0001fscj0bt30hyv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnlce2380000dscjq1fk242p" class="article-share-link">Share</a>
       
       
     </footer>
