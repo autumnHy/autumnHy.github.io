@@ -99,9 +99,9 @@
 <li>APP 里的 views.py 里添加 方法</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> &lt;方法名&gt; <span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'你好'</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\Administrator\Desktop\新建位图图像.bmp" alt="流程"></p>
-<hr>
-<h4 id="三-创建模型"><a href="#三-创建模型" class="headerlink" title="三. 创建模型"></a>三. 创建模型</h4><ol>
+<p><img src="..\image\方法调用流程图.bmp" alt="发放调用流程图"></p>
+<p>三. 创建模型</p>
+<ol>
 <li>app 文件里 models.py 里</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建 学生类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    <span class="comment"># 定义s_name字段,varchar类型,最长4个字符,唯一</span></span><br><span class="line">    s_name = models.CharField(max_length=<span class="number">4</span>, unique=<span class="keyword">True</span>,)</span><br><span class="line">    <span class="comment"># 定义s_age字段,int类型</span></span><br><span class="line">    s_age = models.IntegerField(default=<span class="number">18</span>)</span><br><span class="line">    <span class="comment"># 定义s_gender字段,bool类型</span></span><br><span class="line">    s_gender = models.BooleanField(default=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 定义create_time字段,创建时间,新增是自动添加时间</span></span><br><span class="line">    create_time = models.DateField(auto_now_add=<span class="keyword">True</span>)</span><br><span class="line">    <span class="comment"># 定义operate_time字段,修改时间,每次添加修改时间</span></span><br><span class="line">    operate_time = models.DateField(auto_now=<span class="keyword">True</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#创建表名</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        <span class="comment"># 定义模型迁移到数据库的表名</span></span><br><span class="line">        db_table = <span class="string">'tb_stu'</span></span><br></pre></td></tr></table></figure>
@@ -140,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/23/App安装与使用/" data-id="cjnlqrrr30000o8cji2s2ae2w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/23/App安装与使用/" data-id="cjnluukjq0000j0cj3q9az0rc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnlqrrrb0001o8cjwqqjw5bd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/22/Django安装与配置/" data-id="cjnluukkv0001j0cj9kbeuurr" class="article-share-link">Share</a>
       
       
     </footer>
