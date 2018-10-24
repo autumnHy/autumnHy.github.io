@@ -5,21 +5,22 @@
   
 
   
-  <title>App安装与增删改查 | HeYu</title>
+  <title>App安装&amp;创建模型|方法|路由 | HeYu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一. 创建 app 在 manage.py 同一目录下执行  Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt;  注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹    二. 创建视图连接及方法调用流程 项目里的 urls.py 里添加连接地址  12345678910# 导入 app 的视图from &amp;lt;">
+  <meta name="description" content="一. 创建 app 主目录 Project1 下创建 App Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt; 注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹   [^文件结构图]: Django创建初始                                                创建App">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App安装与增删改查">
-<meta property="og:url" content="http://yoursite.com/2018/10/23/App安装与增删改查/index.html">
+<meta property="og:title" content="App安装&amp;创建模型|方法|路由">
+<meta property="og:url" content="http://yoursite.com/2018/10/23/App安装&创建模型方法路由/index.html">
 <meta property="og:site_name" content="HeYu">
-<meta property="og:description" content="一. 创建 app 在 manage.py 同一目录下执行  Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt;  注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹    二. 创建视图连接及方法调用流程 项目里的 urls.py 里添加连接地址  12345678910# 导入 app 的视图from &amp;lt;">
+<meta property="og:description" content="一. 创建 app 主目录 Project1 下创建 App Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt; 注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹   [^文件结构图]: Django创建初始                                                创建App">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/23/image/文件树形结构图01.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/23/image/方法调用流程图.bmp">
-<meta property="og:updated_time" content="2018-10-24T04:23:08.348Z">
+<meta property="og:updated_time" content="2018-10-24T12:15:03.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App安装与增删改查">
-<meta name="twitter:description" content="一. 创建 app 在 manage.py 同一目录下执行  Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt;  注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹    二. 创建视图连接及方法调用流程 项目里的 urls.py 里添加连接地址  12345678910# 导入 app 的视图from &amp;lt;">
-<meta name="twitter:image" content="http://yoursite.com/2018/10/23/image/方法调用流程图.bmp">
+<meta name="twitter:title" content="App安装&amp;创建模型|方法|路由">
+<meta name="twitter:description" content="一. 创建 app 主目录 Project1 下创建 App Terminal &amp;gt; python manage.py startapp &amp;lt;app_name&amp;gt; 注: 项目文件里会自动生成 &amp;lt;app_name&amp;gt; 同名文件夹   [^文件结构图]: Django创建初始                                                创建App">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/23/image/文件树形结构图01.png">
   
     <link rel="alternate" href="/atom.xml" title="HeYu" type="application/atom+xml">
   
@@ -66,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-App安装与增删改查" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-App安装&amp;创建模型方法路由" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/23/App安装与增删改查/" class="article-date">
+    <a href="/2018/10/23/App安装&创建模型方法路由/" class="article-date">
   <time datetime="2018-10-23T05:51:24.394Z" itemprop="datePublished">2018-10-23</time>
 </a>
     
@@ -80,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      App安装与增删改查
+      App安装&amp;创建模型|方法|路由
     </h1>
   
 
@@ -89,11 +90,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="一-创建-app"><a href="#一-创建-app" class="headerlink" title="一. 创建 app"></a>一. 创建 app</h4><ol>
-<li><p>在 manage.py 同一目录下执行</p>
-<p> Terminal &gt; <code>python manage.py startapp &lt;app_name&gt;</code></p>
-<p> 注: 项目文件里会自动生成 &lt;app_name&gt; 同名文件夹</p>
+<li><p>主目录 Project1 下创建 App</p>
+<p>Terminal &gt; <code>python manage.py startapp &lt;app_name&gt;</code></p>
+<p>注: 项目文件里会自动生成 &lt;app_name&gt; 同名文件夹</p>
 </li>
 </ol>
+<p>[^文件结构图]: Django创建初始                                                创建App后</p>
+<p><img src="../image/文件树形结构图01.png" alt="文件树形结构图01"></p>
 <hr>
 <h4 id="二-创建视图连接及方法调用流程"><a href="#二-创建视图连接及方法调用流程" class="headerlink" title="二. 创建视图连接及方法调用流程"></a>二. 创建视图连接及方法调用流程</h4><ol>
 <li>项目里的 urls.py 里添加连接地址</li>
@@ -158,55 +161,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_stu</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="comment"># 实现更新 方法一</span></span><br><span class="line">    stu = Student.objects.filter(s_name=<span class="string">'小明'</span>).first()</span><br><span class="line">    stu.s_age = <span class="number">20</span></span><br><span class="line">    stu.save()</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'修改成功'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_stu</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="comment"># 实现更新 方法二</span></span><br><span class="line">    Student.objects.filter(s_name=<span class="string">'小明'</span>).update(s_name=<span class="string">'小飞'</span>)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'修改成功'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<hr>
-<h4 id="八-新增模板"><a href="#八-新增模板" class="headerlink" title="八.  新增模板"></a>八.  新增模板</h4><ol>
-<li><p>新增 &lt;templates文件夹&gt; 和 &lt;HTML页面&gt;</p>
-<p><strong>–</strong> project1 ( 一级文件夹)</p>
-<pre><code>__-- __ app (二级文件夹)
-
-    -- migrations( 新增模型后才会出现 )
-
-    --  \__init__.py
-
-    -- admin.py
-
-    -- models.py ( 存放模板 )
-
-    -- tests.py
-
-    -- views.py ( 存放方法 )
-
-__--__ project1 (二级文件夹)
-
-    --  \__init__.py
-
-    -- settings.py ( django的配置文件 )
-
-    -- urls.py ( 存放路由 )
-
-    -- wsgi.py
-
-__-- templates  (新增二级文件夹 *名字必须是这个)__
-
-    __--  stus.html (新增HTML页面)__
-</code></pre></li>
-<li><p>在 settings.py 添加 模板地址</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>urls.py 文件添加方法路由</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [url(<span class="string">r'^all_stu/'</span>, views.all_stu),]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>views.py 文件添加对应方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all_stu</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="comment"># 获取所有学生信息</span></span><br><span class="line">    stus = Student.objects.all()</span><br><span class="line">    <span class="comment"># 返回页面</span></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'stus.html'</span>, &#123;<span class="string">'students'</span>: stus&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>html页面</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;%  for stu in students %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>姓名: &#123;&#123; stu.s_name &#125;&#125;,年龄:&#123;&#123; stu.s_age &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/23/App安装与增删改查/" data-id="cjnmnssrp0000hscjz067xbal" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/23/App安装&创建模型方法路由/" data-id="cjnn4ha160000zwcj679w7ifr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,8 +174,17 @@ __-- templates  (新增二级文件夹 *名字必须是这个)__
     
 <nav id="article-nav">
   
+    <a href="/2018/10/24/模板使用&模型的-一对一多对多/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          模板使用&amp;模型的 一对一|多对多
+        
+      </div>
+    </a>
   
-    <a href="/2018/10/22/Django安装与配置/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/10/22/Django安装&配置/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Django安装与配置</div>
     </a>
@@ -255,11 +223,15 @@ __-- templates  (新增二级文件夹 *名字必须是这个)__
       <ul>
         
           <li>
-            <a href="/2018/10/23/App安装与增删改查/">App安装与增删改查</a>
+            <a href="/2018/10/24/模板使用&模型的-一对一多对多/">模板使用&amp;模型的 一对一|多对多</a>
           </li>
         
           <li>
-            <a href="/2018/10/22/Django安装与配置/">Django安装与配置</a>
+            <a href="/2018/10/23/App安装&创建模型方法路由/">App安装&amp;创建模型|方法|路由</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/22/Django安装&配置/">Django安装与配置</a>
           </li>
         
       </ul>
