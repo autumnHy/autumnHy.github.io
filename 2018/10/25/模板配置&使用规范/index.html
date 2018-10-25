@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>模板配置&amp;使用规范 | HeYu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一. 创建模板 手动创建  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  创建 index.html 的路由 __注:__  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模板配置&amp;使用规范">
+<meta property="og:url" content="http://yoursite.com/2018/10/25/模板配置&使用规范/index.html">
+<meta property="og:site_name" content="HeYu">
+<meta property="og:description" content="一. 创建模板 手动创建  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  创建 index.html 的路由 __注:__  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/25/image/文件树形结构图02.png">
+<meta property="og:updated_time" content="2018-10-25T12:19:38.362Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="模板配置&amp;使用规范">
+<meta name="twitter:description" content="一. 创建模板 手动创建  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  创建 index.html 的路由 __注:__  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/25/image/文件树形结构图02.png">
+  
+    <link rel="alternate" href="/atom.xml" title="HeYu" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">HeYu</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-模板配置&amp;使用规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/25/模板配置&使用规范/" class="article-date">
+  <time datetime="2018-10-25T11:30:55.692Z" itemprop="datePublished">2018-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      模板配置&amp;使用规范
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-创建模板"><a href="#一-创建模板" class="headerlink" title="一. 创建模板"></a>一. 创建模板</h4><ol>
+<li><p>手动创建 <templates 文件夹=""> 和 <html 页面=""></html></templates></p>
+<p><img src="..\image\文件树形结构图02.png" alt="文件树形结构图02"></p>
+</li>
+</ol>
+<ol>
+<li><p>在 settings.py 添加 模板地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建 index.html 的路由</p>
+<pre><code>__注:__  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的路由,应该将 模板放在对应的应用文件下面方便管理.
+
+2.1 在 __应用文件(app)__ 下创建所属 urls.py 文件
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> app <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^index/'</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre><code>2.2 再在 __主目录的urls.py__ 里创建跳转到 应用文件下的urls.py 路由条目
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先加入 include 方法</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url, include</span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    <span class="comment"># 添加 去往应用urls.py 的路由</span></span><br><span class="line">    url(<span class="string">r'^app/'</span>, include(<span class="string">'app.urls'</span>))</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre><code>2.3 最后在 __应用文件下的 views.py __里添加跳往 index.html 的方法
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">'GET'</span>:</span><br><span class="line">        <span class="keyword">return</span> render(request, <span class="string">'index.html'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>设置完成过后在开启服务器在浏览器中输入 ip:port/app/index.html 就可以跳转到index.html.
+</code></pre></li>
+</ol>
+<hr>
+<h4 id="二-模板使用规范"><a href="#二-模板使用规范" class="headerlink" title="二. 模板使用规范"></a>二. 模板使用规范</h4><pre><code>__注:__ index.html 是一个空页面我们在使用的时候会对它加入CSS , JS , 图片等静态文件,为了方便管理这些静态资源,我们在主目录下专门创建一个文件夹存放.
+</code></pre><ol>
+<li><p>创建文件夹 <strong>static</strong>  </p>
+<pre><code>1.1 再在 **static文件夹里** 创建 css / js / image 三个子文件夹
+</code></pre></li>
+<li><p>设置静态资源文件夹 (static) 的路径</p>
+<pre><code>settings.py 文件里添加路径
+</code></pre></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义静态路由</span></span><br><span class="line">STATIC_URL = <span class="string">'/static/'</span></span><br><span class="line"><span class="comment"># 定义静态目录static的地址</span></span><br><span class="line">STATICFILES_DIRS = [</span><br><span class="line">    os.path.join(BASE_DIR, <span class="string">'static'</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>模板的继承</p>
+<pre><code>__注:__  为是方便以后对 index.html 模板 里的内容修改和查看,我们创建它的父类和父父类模板进行存放内容,再让index.html 显示
+</code></pre><p><strong>父父类模板 ( 存放格式 )</strong></p>
+<p><strong>父类模板 (存放内容) – 继承父父类的格式 放入内容</strong></p>
+<p><strong>子类 (最终展示出效果)  — 继承父类</strong></p>
+<p> 3.1 创建 父父类 模板</p>
+<p> 在 templates 文件夹里创建<strong>新的HTML页面</strong> 命名为 &lt;base.html&gt;</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">        &#123;% block title %&#125;</span><br><span class="line">        	</span><br><span class="line">        &#123;% endblock %&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;% block css %&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% block js %&#125;</span><br><span class="line">		</span><br><span class="line">    &#123;% endblock %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;% block content %&#125;</span><br><span class="line">    		</span><br><span class="line">    &#123;% endblock %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code>3.2 创建父类
+
+    在 templates 文件夹里创建 新的HTML 页面 并清空里面的格式 命名为 &lt;base_main.html&gt;
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 继承父父类 --&gt;</span></span><br><span class="line">&#123;% extends 'base.html' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 添加内容 --&gt;</span></span><br><span class="line">&#123;% block css %&#125;	</span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"/static/css/index.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line">	</span><br><span class="line">&#123;% block js %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://code.jquery.com/jquery-3.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>3.3 子类 
+
+    index.html 先前已经创建好了, 清空里面的格式
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;#继承base_main.html页面#&#125;</span><br><span class="line">&#123;% extends 'base_main.html' %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;</span><br><span class="line">    首页</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block css %&#125;</span><br><span class="line">	<span class="comment">&lt;!-- 继承父级模块 css块里的内容 --&gt;</span></span><br><span class="line">   	&#123;&#123; block.super &#125;&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block js %&#125;</span><br><span class="line">	<span class="comment">&lt;!-- 继承父级模块 js块里的内容 --&gt;</span></span><br><span class="line">    &#123;&#123; block.super &#125;&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line">	</span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>heyu<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">&lt;!-- 这是Django里注释 --&gt;</span></span><br><span class="line">&#123;% comment %&#125;</span><br><span class="line">&#123;% endcomment %&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/25/模板配置&使用规范/" data-id="cjnol5a330003jccjzeiypcg4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/24/模型一对一&一对多&多对多关系/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">模型一对一&amp;一对多&amp;多对多关系</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/25/模板配置&使用规范/">模板配置&amp;使用规范</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/模型一对一&一对多&多对多关系/">模型一对一&amp;一对多&amp;多对多关系</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/23/App安装&创建模型方法路由/">应用安装&amp;创建模型|方法|路由</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/22/Django安装&配置/">Django安装与配置</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Heyu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

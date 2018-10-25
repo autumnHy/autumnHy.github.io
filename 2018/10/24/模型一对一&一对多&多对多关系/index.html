@@ -5,22 +5,21 @@
   
 
   
-  <title>模板使用&amp;模型的 一对一|多对多 | HeYu</title>
+  <title>模型一对一&amp;一对多&amp;多对多关系 | HeYu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一. 创建模板 新增  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  urls.py 文件添加方法路由 1urlpatterns = [url(r&apos;^all_stu/&apos;, views.all_stu),]  views.py 文件添加对应方法 123">
+  <meta name="description" content="二. 模型 一对一一. 一对一  从 Student 模型找 StudentInfo 模型里的数据  1234567891011def sel_info_by_stu(request):    if request.method == &apos;GET&apos;:        # 通过学生查找扩展信息        stu = Student.objects.get(s_name=&apos;小红&apos;)        #">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模板使用&amp;模型的 一对一|多对多">
-<meta property="og:url" content="http://yoursite.com/2018/10/24/模板使用&模型的-一对一多对多/index.html">
+<meta property="og:title" content="模型一对一&amp;一对多&amp;多对多关系">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/模型一对一&一对多&多对多关系/index.html">
 <meta property="og:site_name" content="HeYu">
-<meta property="og:description" content="一. 创建模板 新增  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  urls.py 文件添加方法路由 1urlpatterns = [url(r&apos;^all_stu/&apos;, views.all_stu),]  views.py 文件添加对应方法 123">
+<meta property="og:description" content="二. 模型 一对一一. 一对一  从 Student 模型找 StudentInfo 模型里的数据  1234567891011def sel_info_by_stu(request):    if request.method == &apos;GET&apos;:        # 通过学生查找扩展信息        stu = Student.objects.get(s_name=&apos;小红&apos;)        #">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/10/24/image/文件树形结构图02.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/24/image/模型一度一关系图.png">
-<meta property="og:updated_time" content="2018-10-24T12:59:22.101Z">
+<meta property="og:updated_time" content="2018-10-25T09:19:00.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模板使用&amp;模型的 一对一|多对多">
-<meta name="twitter:description" content="一. 创建模板 新增  和      在 settings.py 添加 模板地址 123TEMPLATES = [    &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],]  urls.py 文件添加方法路由 1urlpatterns = [url(r&apos;^all_stu/&apos;, views.all_stu),]  views.py 文件添加对应方法 123">
-<meta name="twitter:image" content="http://yoursite.com/2018/10/24/image/文件树形结构图02.png">
+<meta name="twitter:title" content="模型一对一&amp;一对多&amp;多对多关系">
+<meta name="twitter:description" content="二. 模型 一对一一. 一对一  从 Student 模型找 StudentInfo 模型里的数据  1234567891011def sel_info_by_stu(request):    if request.method == &apos;GET&apos;:        # 通过学生查找扩展信息        stu = Student.objects.get(s_name=&apos;小红&apos;)        #">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/24/image/模型一度一关系图.png">
   
     <link rel="alternate" href="/atom.xml" title="HeYu" type="application/atom+xml">
   
@@ -67,9 +66,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-模板使用&amp;模型的-一对一多对多" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-模型一对一&amp;一对多&amp;多对多关系" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/24/模板使用&模型的-一对一多对多/" class="article-date">
+    <a href="/2018/10/24/模型一对一&一对多&多对多关系/" class="article-date">
   <time datetime="2018-10-24T12:11:04.230Z" itemprop="datePublished">2018-10-24</time>
 </a>
     
@@ -81,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      模板使用&amp;模型的 一对一|多对多
+      模型一对一&amp;一对多&amp;多对多关系
     </h1>
   
 
@@ -89,28 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一-创建模板"><a href="#一-创建模板" class="headerlink" title="一. 创建模板"></a>一. 创建模板</h4><ol>
-<li><p>新增 <templates 文件夹=""> 和 <html 页面=""></html></templates></p>
-<p><img src="..\image\文件树形结构图02.png" alt="文件树形结构图02"></p>
-</li>
-</ol>
-<ol start="2">
-<li><p>在 settings.py 添加 模板地址</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>urls.py 文件添加方法路由</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [url(<span class="string">r'^all_stu/'</span>, views.all_stu),]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>views.py 文件添加对应方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all_stu</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="comment"># 获取所有学生信息</span></span><br><span class="line">    stus = Student.objects.all()</span><br><span class="line">    <span class="comment"># 返回页面</span></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'index.html'</span>, &#123;<span class="string">'students'</span>: stus&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>HTML 页面</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;%  for stu in students %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>姓名: &#123;&#123; stu.s_name &#125;&#125;,年龄:&#123;&#123; stu.s_age &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<hr>
-<h4 id="二-模型-一对一"><a href="#二-模型-一对一" class="headerlink" title="二. 模型 一对一"></a>二. 模型 一对一</h4><pre><code>环境:
-</code></pre><p><img src="../image/模型一度一关系图.png" alt="模型一度一关系图"></p>
+        <h4 id="二-模型-一对一"><a href="#二-模型-一对一" class="headerlink" title="二. 模型 一对一"></a>二. 模型 一对一</h4><h4 id="一-一对一"><a href="#一-一对一" class="headerlink" title="一. 一对一"></a>一. 一对一</h4><p><img src="../image/模型一度一关系图.png" alt="模型一度一关系图"></p>
 <ol>
 <li>从 <strong>Student</strong> 模型找 <strong>StudentInfo</strong> 模型里的数据</li>
 </ol>
@@ -124,7 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/24/模板使用&模型的-一对一多对多/" data-id="cjno1jq2e0002accjerkvnr40" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/24/模型一对一&一对多&多对多关系/" data-id="cjnol5a270001jccjrec4sdct" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,10 +111,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2018/10/25/模板配置&使用规范/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          模板配置&amp;使用规范
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/10/23/App安装&创建模型方法路由/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">App安装&amp;创建模型|方法|路由</div>
+      <div class="article-nav-title">应用安装&amp;创建模型|方法|路由</div>
     </a>
   
 </nav>
@@ -173,11 +160,15 @@
       <ul>
         
           <li>
-            <a href="/2018/10/24/模板使用&模型的-一对一多对多/">模板使用&amp;模型的 一对一|多对多</a>
+            <a href="/2018/10/25/模板配置&使用规范/">模板配置&amp;使用规范</a>
           </li>
         
           <li>
-            <a href="/2018/10/23/App安装&创建模型方法路由/">App安装&amp;创建模型|方法|路由</a>
+            <a href="/2018/10/24/模型一对一&一对多&多对多关系/">模型一对一&amp;一对多&amp;多对多关系</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/23/App安装&创建模型方法路由/">应用安装&amp;创建模型|方法|路由</a>
           </li>
         
           <li>
