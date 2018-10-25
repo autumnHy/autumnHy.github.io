@@ -94,9 +94,9 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建 index.html 的路由</p>
-<pre><code>__注:__  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的路由,应该将 模板放在对应的应用文件下面方便管理.
-</code></pre><p>2.1 在 <strong>应用文件(app)</strong> 下创建所属 urls.py 文件</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> app <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^index/'</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p> <strong>注:</strong>  一个项目肯定会有多个应用(app) 列如 登陆的 业务的 等 ,路由条目会很多,所以主目录下的urls.py 不易存放全部的路由,应该将 模板放在对应的应用文件下面方便管理.</p>
+<pre><code>2.1 在 __应用文件(app)__ 下创建所属 urls.py 文件
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> app <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^index/'</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <pre><code>2.2 再在 __主目录的urls.py__ 里创建跳转到 应用文件下的urls.py 路由条目
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先加入 include 方法</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url, include</span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    <span class="comment"># 添加 去往应用urls.py 的路由</span></span><br><span class="line">    url(<span class="string">r'^app/'</span>, include(<span class="string">'app.urls'</span>))</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <pre><code>2.3 最后在 __应用文件下的 views.py __里添加跳往 index.html 的方法
@@ -105,7 +105,7 @@
 </code></pre></li>
 </ol>
 <hr>
-<h4 id="二-模板使用规范"><a href="#二-模板使用规范" class="headerlink" title="二. 模板使用规范"></a>二. 模板使用规范</h4><p><strong>    注:</strong> index.html 是一个空页面我们在使用的时候会对它加入CSS , JS , 图片等静态文件,为了方便管理这些静态资源,我们在主目录下专门创建一个文件夹存放.</p>
+<h4 id="二-模板使用规范"><a href="#二-模板使用规范" class="headerlink" title="二. 模板使用规范"></a>二. 模板使用规范</h4><p><strong>注:</strong> index.html 是一个空页面我们在使用的时候会对它加入CSS , JS , 图片等静态文件,为了方便管理这些静态资源,我们在主目录下专门创建一个文件夹存放.</p>
 <ol>
 <li><p>创建文件夹 <strong>static</strong>  </p>
 <pre><code>1.1 再在 **static文件夹里** 创建 css / js / image 三个子文件夹
@@ -134,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/25/模板配置&使用规范/" data-id="cjnolloha0003g4cjee1nnu6g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/25/模板配置&使用规范/" data-id="cjnolpy700003lkcji7vgfkb9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/24/模型一对一&一对多&多对多关系/" data-id="cjnolloha0001g4cjyjlbfzgj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/24/模型一对一&一对多&多对多关系/" data-id="cjnolpy700002lkcj64whcylf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/23/App安装&创建模型方法路由/" data-id="cjnolloha0002g4cjn6rp0z6j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/23/App安装&创建模型方法路由/" data-id="cjnolpy700001lkcjnuq2vqei" class="article-share-link">Share</a>
       
       
     </footer>
@@ -382,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/22/Django安装&配置/" data-id="cjnolloha0000g4cj5farx9o6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/22/Django安装&配置/" data-id="cjnolpy700000lkcjkp9hu4d6" class="article-share-link">Share</a>
       
       
     </footer>
